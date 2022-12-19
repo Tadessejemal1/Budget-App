@@ -7,6 +7,6 @@
 #  updated_at :datetime         not null
 #
 class ExpenseCategory < ApplicationRecord
-    belongs_to :category
-    belongs_to :expense
+  belongs_to :category
+  belongs_to :expense
 end

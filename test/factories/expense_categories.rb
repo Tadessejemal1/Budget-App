@@ -8,6 +8,8 @@
 #
 FactoryBot.define do
   factory :expense_category do
-    
+    name { 'Omlet breakfast' }
+    amount { 75.5 }
+    author { 1 }
   end
 end
