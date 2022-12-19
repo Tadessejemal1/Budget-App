@@ -10,12 +10,9 @@ AllCops:
 
   DisplayCopNames: true
 Layout/EndOfLine:
-  Enabled: False
+   Enabled: False
 Layout/LineLength:
-  Max: 160
-
-Style/RedundantConstantBase:  
-  Enabled: false
+  Max: 120
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
