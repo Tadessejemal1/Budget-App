@@ -27,13 +27,16 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 30
+  Max: 60
 
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
+  Enabled: false
+
+Style/RedundantConstantBase:
   Enabled: false
 Style/AndOr:
   Enabled: false
