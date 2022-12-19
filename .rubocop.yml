@@ -35,7 +35,7 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
   Enabled: false
-Style/RedundantAssignment:  
+Style/RedundantConstantBase:  
   Enabled: false
 Style/RedundantAssignment:
   Enabled: false
