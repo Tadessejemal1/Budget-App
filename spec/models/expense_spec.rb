@@ -1,7 +1,17 @@
+# == Schema Information
+#
+# Table name: expenses
+#
+#  id         :bigint           not null, primary key
+#  amount     :decimal(, )
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
-  let(:user) { FactoryBot.create(:user, name: 'Abebe') }
+  user = User.first
   let(:expense) do
     FactoryBot.create(:expense,
                       name: 'Beef cheese toast',
