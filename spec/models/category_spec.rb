@@ -1,7 +1,17 @@
+# == Schema Information
+#
+# Table name: categories
+#
+#  id         :bigint           not null, primary key
+#  icon       :string
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let(:user) { FactoryBot.create(:user, name: 'Adama') }
+  user = User.first
   let(:category) do
     FactoryBot.create(:category,
                       name: 'Housing',

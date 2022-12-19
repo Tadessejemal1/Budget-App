@@ -571,3 +571,207 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 314ms (Views: 244.5ms | ActiveRecord: 0.0ms | Allocations: 963)
 
 
+Started GET "/users" for 127.0.0.1 at 2022-12-19 21:01:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-12-19 21:34:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 21:35:20 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 141.8ms | Allocations: 4918)
+  Rendered layout layouts/application.html.erb (Duration: 143.5ms | Allocations: 5007)
+Completed 500 Internal Server Error in 858ms (ActiveRecord: 167.3ms | Allocations: 17475)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000012fc0>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email form-control", class:'form-control' %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-12-19 21:45:30 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 279)
+Completed 200 OK in 33ms (Views: 4.8ms | Allocations: 855)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-19 21:55:35 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 49ms (Views: 2.1ms | Allocations: 242)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 21:56:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 61.3ms | Allocations: 4479)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 4567)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 8.9ms | Allocations: 12561)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000017908>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email form-control", class:'form-control' %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 22:05:07 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 157.5ms | Allocations: 4913)
+  Rendered layout layouts/application.html.erb (Duration: 159.5ms | Allocations: 5001)
+Completed 500 Internal Server Error in 219ms (Allocations: 7217)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000017c78>
+
+    '.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                                ^^^^^^^^^^^^
+Did you mean?  session):
+     5:     <a href="#"  class="text-white nav-link">Log in</a>  
+     6:   </div>
+     7:   <div class="container d-flex flex-column align-items-stretch pt-4">
+     8:     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     9:       <div class="field form-group py-1">
+    10:         <%= f.email_field :email,
+    11:           autofocus: true,
+  
+app/views/devise/sessions/new.html.erb:8
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 22:10:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 150.8ms | Allocations: 4850)
+  Rendered layout layouts/application.html.erb (Duration: 152.3ms | Allocations: 4938)
+Completed 500 Internal Server Error in 214ms (Allocations: 7148)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000018010>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/sign-in" for 127.0.0.1 at 2022-12-19 22:10:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/sign-in"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 22:10:43 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4469)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4548)
+Completed 500 Internal Server Error in 47ms (Allocations: 6118)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000018628>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/user/sign_in" for 127.0.0.1 at 2022-12-19 22:10:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_in"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 22:10:56 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4469)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4548)
+Completed 500 Internal Server Error in 52ms (Allocations: 6065)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x00000000018c18>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+  [1m[35m (38.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (55.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (57.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-19 22:18:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 41.2ms | Allocations: 4773)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 4861)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 11.9ms | Allocations: 13232)
+
+
+  
+ActionView::Template::Error (undefined method `session_path' for #<ActionView::Base:0x0000000001d498>
+
+'.freeze;@output_buffer.append=  form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| @output_buffer.safe_append='
+                                                                            ^^^^^^^^^^^^
+Did you mean?  session):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
