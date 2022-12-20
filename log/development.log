@@ -821,3 +821,32 @@ Processing by Devise::SessionsController#create as TURBO_STREAM
 Completed 401 Unauthorized in 184ms (ActiveRecord: 50.8ms | Allocations: 3667)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-20 10:21:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (139.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 73.7ms | Allocations: 476)
+Completed 200 OK in 605ms (Views: 183.4ms | ActiveRecord: 0.0ms | Allocations: 3321)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-20 10:22:10 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 96.0ms | Allocations: 241)
+  Rendered devise/shared/_links.html.erb (Duration: 149.8ms | Allocations: 582)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1503.9ms | Allocations: 5028)
+  Rendered layout layouts/application.html.erb (Duration: 5255.3ms | Allocations: 26972)
+Completed 200 OK in 5870ms (Views: 5305.5ms | ActiveRecord: 391.1ms | Allocations: 36504)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-20 10:22:26 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 246)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 484.4ms | Allocations: 2185)
+  Rendered layout layouts/application.html.erb (Duration: 630.5ms | Allocations: 3349)
+Completed 200 OK in 693ms (Views: 651.6ms | ActiveRecord: 0.0ms | Allocations: 4759)
+
+
