@@ -850,3 +850,18 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 693ms (Views: 651.6ms | ActiveRecord: 0.0ms | Allocations: 4759)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-20 11:10:16 +0300
+Processing by SplashController#index as HTML
+Completed 401 Unauthorized in 37ms (Allocations: 1059)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-20 11:10:19 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 8.2ms | Allocations: 544)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.9ms | Allocations: 2242)
+  Rendered layout layouts/application.html.erb (Duration: 304.9ms | Allocations: 3681)
+Completed 200 OK in 404ms (Views: 343.7ms | ActiveRecord: 10.2ms | Allocations: 11087)
+
+
