@@ -13,12 +13,14 @@
   </head>
 
   <body>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-      <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
+    <main class="mx-auto py-5 h-100 bg-light">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
       <% end %>
-    <%= yield %>
+        <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+      <%= yield %>
+    </main>  
   </body>
 </html>
