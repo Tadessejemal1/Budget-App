@@ -821,3 +821,268 @@ Processing by Devise::SessionsController#create as TURBO_STREAM
 Completed 401 Unauthorized in 184ms (ActiveRecord: 50.8ms | Allocations: 3667)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-20 10:21:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (139.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/useradd/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 73.7ms | Allocations: 476)
+Completed 200 OK in 605ms (Views: 183.4ms | ActiveRecord: 0.0ms | Allocations: 3321)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-20 10:22:10 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 96.0ms | Allocations: 241)
+  Rendered devise/shared/_links.html.erb (Duration: 149.8ms | Allocations: 582)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1503.9ms | Allocations: 5028)
+  Rendered layout layouts/application.html.erb (Duration: 5255.3ms | Allocations: 26972)
+Completed 200 OK in 5870ms (Views: 5305.5ms | ActiveRecord: 391.1ms | Allocations: 36504)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-20 10:22:26 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 246)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 484.4ms | Allocations: 2185)
+  Rendered layout layouts/application.html.erb (Duration: 630.5ms | Allocations: 3349)
+Completed 200 OK in 693ms (Views: 651.6ms | ActiveRecord: 0.0ms | Allocations: 4759)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-20 11:10:16 +0300
+Processing by SplashController#index as HTML
+Completed 401 Unauthorized in 37ms (Allocations: 1059)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-20 11:10:19 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 8.2ms | Allocations: 544)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 37.9ms | Allocations: 2242)
+  Rendered layout layouts/application.html.erb (Duration: 304.9ms | Allocations: 3681)
+Completed 200 OK in 404ms (Views: 343.7ms | ActiveRecord: 10.2ms | Allocations: 11087)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-20 11:25:50 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.4ms | Allocations: 194)
+  Rendered devise/shared/_links.html.erb (Duration: 7.0ms | Allocations: 483)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 55.1ms | Allocations: 2464)
+  Rendered layout layouts/application.html.erb (Duration: 149.2ms | Allocations: 3888)
+Completed 200 OK in 216ms (Views: 180.6ms | Allocations: 5422)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-20 11:26:05 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tadessejemal63@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (90.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tadessejemal63@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 621)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1904)
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 3015)
+Completed 200 OK in 784ms (Views: 134.9ms | ActiveRecord: 100.4ms | Allocations: 13779)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-20 11:34:37 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tadessejemal63@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tadessejemal63@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.2ms | Allocations: 681)
+  Rendered devise/shared/_links.html.erb (Duration: 11.6ms | Allocations: 472)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 64.6ms | Allocations: 2941)
+  Rendered layout layouts/application.html.erb (Duration: 152.4ms | Allocations: 4361)
+Completed 200 OK in 620ms (Views: 185.7ms | ActiveRecord: 9.6ms | Allocations: 13088)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-20 11:36:25 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tadessejemal63@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tadessejemal63@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 10.0ms | Allocations: 681)
+  Rendered devise/shared/_links.html.erb (Duration: 7.0ms | Allocations: 396)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 55.4ms | Allocations: 2807)
+  Rendered layout layouts/application.html.erb (Duration: 149.5ms | Allocations: 4228)
+Completed 200 OK in 608ms (Views: 188.2ms | ActiveRecord: 1.2ms | Allocations: 10191)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-20 11:38:08 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tadessejemal63@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tadessejemal63@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 15.5ms | Allocations: 681)
+  Rendered devise/shared/_links.html.erb (Duration: 8.8ms | Allocations: 393)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 70.7ms | Allocations: 2804)
+  Rendered layout layouts/application.html.erb (Duration: 162.4ms | Allocations: 4226)
+Completed 200 OK in 642ms (Views: 212.0ms | ActiveRecord: 1.5ms | Allocations: 10200)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-20 11:38:44 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 1940)
+Completed 200 OK in 119ms (Views: 87.1ms | ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-12-20 11:38:52 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 88.6ms | Allocations: 2733)
+Completed 200 OK in 139ms (Views: 107.1ms | ActiveRecord: 0.0ms | Allocations: 3740)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-12-20 11:43:52 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abebetadesse2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "abebetadesse2@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 255ms (ActiveRecord: 14.0ms | Allocations: 8166)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abebetadesse2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 11.5ms | Allocations: 459)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 45.4ms | Allocations: 1904)
+  Rendered layout layouts/application.html.erb (Duration: 155.3ms | Allocations: 3328)
+Completed 200 OK in 610ms (Views: 205.9ms | ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-12-20 11:45:01 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.6ms | Allocations: 194)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 101)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 1692)
+  Rendered layout layouts/application.html.erb (Duration: 114.7ms | Allocations: 2852)
+Completed 200 OK in 165ms (Views: 133.5ms | ActiveRecord: 0.0ms | Allocations: 3870)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-20 11:45:41 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tadessejemal63@gmail.com", "name"=>"Tadesse Jemal Mohammed", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tadessejemal63@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (94.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Tadesse Jemal Mohammed"], ["created_at", "2022-12-20 08:45:42.378035"], ["updated_at", "2022-12-20 08:45:42.378035"], ["email", "tadessejemal63@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", nil], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (36.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 557ms (ActiveRecord: 131.7ms | Allocations: 7678)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-12-20 11:45:42 +0300
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 1345)
+Completed 200 OK in 394ms (Views: 127.3ms | ActiveRecord: 0.4ms | Allocations: 5141)
+
+
+Started GET "/splash" for 127.0.0.1 at 2022-12-20 11:46:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/splash"):
+  
+Started GET "/expenses" for 127.0.0.1 at 2022-12-20 11:46:42 +0300
+Processing by ExpensesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 93.3ms | Allocations: 1340)
+Completed 200 OK in 224ms (Views: 104.7ms | ActiveRecord: 0.4ms | Allocations: 4859)
+
+
+Started GET "/expenses/new" for 127.0.0.1 at 2022-12-20 11:46:47 +0300
+Processing by ExpensesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Rendered expenses/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 82.7ms | Allocations: 1094)
+Completed 200 OK in 142ms (Views: 84.2ms | ActiveRecord: 5.6ms | Allocations: 5151)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-12-20 11:47:04 +0300
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 72.6ms | Allocations: 1013)
+Completed 200 OK in 108ms (Views: 74.1ms | ActiveRecord: 1.0ms | Allocations: 2613)
+
+
+Started GET "/splashs" for 127.0.0.1 at 2022-12-20 11:55:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/splashs"):
+  
+Started GET "/splash" for 127.0.0.1 at 2022-12-20 11:55:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/splash"):
+  
+Started GET "/users/splash" for 127.0.0.1 at 2022-12-20 11:55:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/splash"):
+  
+Started GET "/users/splash" for 127.0.0.1 at 2022-12-20 11:56:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/splash"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-20 11:57:08 +0300
+Processing by SplashController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering splash/index.html.erb within layouts/application
+  Rendered splash/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 1339)
+Completed 200 OK in 164ms (Views: 86.9ms | ActiveRecord: 8.4ms | Allocations: 10404)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-12-20 11:57:30 +0300
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 76.5ms | Allocations: 1235)
+Completed 200 OK in 147ms (Views: 78.8ms | ActiveRecord: 0.5ms | Allocations: 4535)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-20 11:57:39 +0300
+Processing by SplashController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering splash/index.html.erb within layouts/application
+  Rendered splash/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 1011)
+Completed 200 OK in 115ms (Views: 80.5ms | ActiveRecord: 0.4ms | Allocations: 2777)
+
+
