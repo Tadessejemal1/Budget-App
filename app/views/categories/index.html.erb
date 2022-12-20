@@ -1,2 +1,58 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-start gap-1">
+            <li class="nav-item my-3">
+              <%= link_to categories_path, class: "text-white nav-link text-bold" do %>
+                <i class="bi bi-house py-2"> Home</i>
+              <% end%>
+            </li>
+            <li class="nav-item my-3">
+              <p class="m-0">User: <%= current_user.email %></p>
+            </li>
+            <li class="nav-item">
+              <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-warning mb-1" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <p class="text-uppercase m-0">Categories</p>
+    <a href="#"  class="text-white nav-link"><i class="bi bi-search"></i></a>  
+  </div>
+
+  <div title="Add category" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
+    <%= link_to new_category_path, id: 'add_new_category' do %>
+      <i class="bi bi-plus-circle-fill text-success"></i>
+    <% end%>
+  </div>
+
+  <% if @categories.present? %>
+    <ul class="list-group mx-0 mt-3 px-2">
+      <% @categories.each do |category|%>
+        <%= link_to category_expenses_path(category), class: "nav-link  text-secondary p-0", id: "category_show#{category.id}" do %>
+          <li class="row bg-white my-1 border">
+            <div class="d-flex flex-row gap-3 py-2">
+              <img src=<%= category.icon %> class="img-thumbnail" alt=<%= category.name %>>
+              <div class="w-100">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <p class="p-0"><%= category.name %></p>
+                </div>
+                <p class="card-text"><%= category.created_at.strftime('%d %b %Y') %></p>
+              </div>
+            </div>
+          </li>
+        <% end%>
+      <% end %>
+    </ul>
+  <% else %>
+    <div class="border-2">
+      <p class="bg-light text-center"> There are no categories, yet. Please add categories!</p>
+    </div>
+  <% end %>
+</section>      

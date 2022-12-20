@@ -1,2 +1,7 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
+<section class="position-relative  bg-light">
+<h1 class="custom_splash_title position-fixed bottom-50 w-100 text-center">Budget App</h1>
+<div class="d-flex flex-column px-3 position-fixed bottom-0" style="width: 100%">
+  <%= link_to "Sign In", new_user_session_path, class: "nav-link bg-primary text-white text-center text-uppercase" %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "nav-link bg-light text-primary text-center text-uppercase" %>
+</div>
+</section>
