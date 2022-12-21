@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :system do
-  # rubocop:disable Metrics/BlockLength
   context 'sign up page' do
     before(:each) do
       driven_by(:rack_test)
@@ -55,5 +54,4 @@ RSpec.describe 'Users', type: :system do
       )
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end

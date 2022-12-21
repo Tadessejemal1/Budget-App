@@ -5,7 +5,6 @@ RSpec.describe 'Expenses', type: :system do
     driven_by(:rack_test)
   end
 
-  # rubocop:disable Metrics/BlockLength
   context 'add new expense page' do
     before :each do
       visit '/users/sign_in'
@@ -66,5 +65,4 @@ RSpec.describe 'Expenses', type: :system do
       expect(page).to have_selector(:css, 'a#add_new_expense')
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end

@@ -18,9 +18,9 @@
 #  fk_rails_...  (author_id => users.id)
 #
 FactoryBot.define do
-    factory :category do
-      name { 'Food and Drinks' }
-      icon { 'http://icons-buget/png' }
-      author { 1 }
-    end
+  factory :category do
+    name { 'Food and Drinks' }
+    icon { 'http://icons-buget/png' }
+    author { 1 }
   end
+end

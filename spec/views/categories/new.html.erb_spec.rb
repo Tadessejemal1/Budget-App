@@ -5,7 +5,6 @@ RSpec.describe 'Categories', type: :system do
     driven_by(:rack_test)
   end
 
-  # rubocop:disable Metrics/BlockLength
   context 'add new category page' do
     before :each do
       visit '/users/sign_in'
@@ -51,5 +50,4 @@ RSpec.describe 'Categories', type: :system do
       expect(page).to have_field('Icon url')
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end
