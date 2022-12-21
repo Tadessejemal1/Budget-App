@@ -18,13 +18,17 @@
 #
 # Indexes
 #
+#  index_users_on_confirmation_token    (confirmation_token) UNIQUE
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  user = User.first
+  Category.delete_all
+  Expense.delete_all
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
 
   describe 'validate data' do
     it 'name should be present' do
@@ -33,7 +37,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'name should be present' do
-      user.name = 'kebede'
+      user.name = 'Abebe'
       expect(user).to be_valid
     end
   end

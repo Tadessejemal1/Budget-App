@@ -3,8 +3,8 @@
 # Table name: categories
 #
 #  id         :bigint           not null, primary key
-#  icon       :string
-#  name       :string
+#  icon       :string           not null
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  author_id  :bigint           not null
@@ -17,10 +17,10 @@
 #
 #  fk_rails_...  (author_id => users.id)
 #
-require 'test_helper'
-
-class CategoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+FactoryBot.define do
+  factory :category do
+    name { 'Food and Drinks' }
+    icon { 'http://icons-buget/png' }
+    author { 1 }
+  end
 end

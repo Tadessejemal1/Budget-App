@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
   include CategoriesHelper
   def index
     @categories = Category.where(author: current_user)

@@ -18,13 +18,21 @@
 #
 # Indexes
 #
+#  index_users_on_confirmation_token    (confirmation_token) UNIQUE
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
-require 'test_helper'
+FactoryBot.define do
+  factory :user do
+    name { 'Abebe' }
+    email { 'abebe12@mail.com' }
+    password { '123456' }
+    password_confirmation { '123456' }
 
-class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+    trait :confirmed do
+      confirmed_at { Time.zone.now }
+      confirmation_sent_at { Time.zone.now }
+      confirmation_token { '123456' }
+    end
+  end
 end
