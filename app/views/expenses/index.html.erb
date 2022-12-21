@@ -1,2 +1,42 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2 mb-0">
+    <%= link_to categories_path, class: "text-white nav-link" do %>
+      <i class="bi bi-arrow-left"></i>
+    <% end%>
+    <p class="text-uppercase m-0">Expenses</p>
+    <a href="#"  class="text-white nav-link"><i class="bi bi-search"></i></a>  
+  </div>
+
+  <div title="Add expense" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
+    <%= link_to new_expense_path(prev_category_id: @category), id: 'add_new_expense'  do %>
+      <i class="bi bi-plus-circle-fill text-success"></i>
+    <% end%>
+  </div>
+  <% if @expenses.present? %>
+    <div class="d-flex justify-content-between align-items-center bg-white border border-bottom-2 py-4 px-2">
+      <h4 class="m-0">
+        <b><%= @category.name %></b>
+      </h4>
+      <p class="m-0">
+        <b><%= number_to_currency(@total_category_expense, :unit => "$") %></b>
+      </p>
+    </div>
+    <ul class="list-group mx-0 mt-3">
+      <% @expenses.each do |expense| %>
+        <li class="bg-white my-1 border px-2">
+          <%= link_to expense_path(expense), class: "text-secondary nav-link p-1" do %>
+            <div class="d-flex justify-content-between align-items-center py-2">
+              <h6 class="m-0"><b><%= expense.name %></b></h6>
+              <p class="m-0"><%= number_to_currency(expense.amount, :unit => "$") %></p>
+            </div>
+            <p class="card-text"><%= expense.created_at.strftime('%d %b %Y') %></p>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <div class="border-2">
+      <p class="bg-light text-center"> No expenses, yet! Please add expenses.</p>
+    </div>
+  <% end %>
+</section>

@@ -1,2 +1,15 @@
-<h1>Expenses#show</h1>
-<p>Find me in app/views/expenses/show.html.erb</p>
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2 mb-0">
+    <%= link_to :back, class: "text-white nav-link" do %>
+      <i class="bi bi-arrow-left"></i>
+    <% end%>
+    <p class="text-uppercase m-0">Details</p>
+    <a href="#"  class="text-white nav-link"><i class="bi bi-search"></i></a>  
+  </div>
+  
+  <div class="bg-white my-1 border p-2">
+    <h4><b><%= @expense.name %></b></h4>
+    <p>created: <%= @expense.created_at %></p>
+    <p>Total expense amount: <%= number_to_currency(@expense.amount, :unit => "$") %></p>
+  </div>
+</section>

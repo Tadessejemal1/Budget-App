@@ -1,2 +1,43 @@
-<h1>Expenses#new</h1>
-<p>Find me in app/views/expenses/new.html.erb</p>
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2">
+    <a href="#" class="text-white nav-link"><i class="bi bi-arrow-left"></i></a>
+    <p class="text-uppercase m-0">add expense</p>
+    <a href="#"  class="text-white nav-link">Save</a>  
+  </div>
+  <div class="container d-flex flex-column align-items-stretch pt-4">
+    <%= form_with model: @expense do |f| %>
+      <div class="form-group py-2">
+        <%= f.text_field :name,
+          autofocus: true,
+          autocomplete: "name",
+          placeholder: "Expense name",
+          class: "form-control",
+          required: true %>
+      </div>
+
+      <div class="form-group py-2">
+        <%= f.number_field :amount,
+          step: 0.01,
+          autofocus: true,
+          autocomplete: "amount",
+          placeholder: "Amount",
+          class: "form-control",
+          required: true %>
+      </div>
+      <div class="form-group py-2">
+        <%= f.label :select_categories %>
+        <%= select("category",
+          "category_id",
+          @categories.each.collect { |c| [ c.name, c.id ] },
+          { include_blank: false },
+          multiple: true,
+          size: 5,
+          class: "form-control p-1",
+          required: true) %>
+      </div>
+      <div class="actions py-2">
+        <%= f.submit "Save", class: "btn btn-primary px-3", data: { turbo: false } %>
+      </div>
+    <% end %>
+  </div>
+</section>

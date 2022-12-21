@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
+  include CategoriesHelper
   def index
     @categories = Category.where(author: current_user)
-    @total_category_expenses = category_expenses_path(@categories)
+    @total_category_expenses = category_expense(@categories)
   end
 
   def show; end

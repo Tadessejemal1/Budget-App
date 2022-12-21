@@ -1,69 +1,38 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: %i[show edit update destroy]
+  include ExpensesHelper
 
-  # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @category = Category.where(params[:category_id])
+    @expenses = category_expenses(params[:category_id])
+    @total_category_expense = total_category_expense(params[:category_id])
   end
 
-  # GET /expenses/1 or /expenses/1.json
-  def show; end
-
-  # GET /expenses/new
-  def new
-    @expense = Expense.new
-  end
-
-  # GET /expenses/1/edit
-  def edit; end
-
-  # POST /expenses or /expenses.json
-  def create
-    @expense = Expense.new(expense_params)
-
-    respond_to do |format|
-      if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
-        format.json { render :show, status: :created, location: @expense }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /expenses/1 or /expenses/1.json
-  def update
-    respond_to do |format|
-      if @expense.update(expense_params)
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully updated.' }
-        format.json { render :show, status: :ok, location: @expense }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /expenses/1 or /expenses/1.json
-  def destroy
-    @expense.destroy
-
-    respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_expense
+  def show
     @expense = Expense.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
+  def new
+    @expense = Expense.new
+    @categories = Category.where(author: current_user)
+  end
+
+  def create
+    @expense = Expense.new(expense_params)
+    @prev_category = Category.where(params[:expense][:prev_category_id])
+    create_expense(@expense, params[:category][:category_id])
+
+    if @expense.save
+      redirect_to category_expenses_path(@prev_category), notice: 'Added expense successfully!'
+    else
+      redirect_to new_expense_path(prev_category_id: @prev_category.id), alert: 'Expense was not added!'
+    end
+  end
+
+  def destroy; end
+
   def expense_params
-    params.require(:expense).permit(:name, :amount)
+    expense_hash = params.require(:expense).permit(:name, :amount)
+    expense_hash[:author] = current_user
+    expense_hash
   end
 end
