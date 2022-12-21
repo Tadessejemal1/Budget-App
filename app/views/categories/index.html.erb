@@ -42,6 +42,9 @@
               <div class="w-100">
                 <div class="d-flex flex-row justify-content-between align-items-center">
                   <p class="p-0"><%= category.name %></p>
+                  <p class="m-0">
+                    <%= number_to_currency(@total_category_expenses[category.id][:total_expense], :unit => "$") %>
+                  </p>
                 </div>
                 <p class="card-text"><%= category.created_at.strftime('%d %b %Y') %></p>
               </div>
