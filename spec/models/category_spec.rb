@@ -3,8 +3,8 @@
 # Table name: categories
 #
 #  id         :bigint           not null, primary key
-#  icon       :string
-#  name       :string
+#  icon       :string           not null
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  author_id  :bigint           not null
@@ -20,7 +20,10 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  user = User.first
+  Category.delete_all
+  Expense.delete_all
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
   let(:category) do
     FactoryBot.create(:category,
                       name: 'Housing',

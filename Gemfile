@@ -50,7 +50,6 @@ gem 'font-awesome-sass', '~> 6.2.1'
 gem 'devise'
 # authorization
 gem 'cancancan'
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -59,6 +58,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -68,6 +68,8 @@ group :development do
   gem 'annotate'
 
   gem 'letter_opener'
+
+  gem 'bullet'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

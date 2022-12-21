@@ -20,7 +20,10 @@
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
-  user = User.first
+  Category.delete_all
+  Expense.delete_all
+  User.delete_all
+  let(:user) { FactoryBot.create(:user, :confirmed) }
   let(:expense) do
     FactoryBot.create(:expense,
                       name: 'Beef cheese toast',

@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
+  Category.delete_all
+  Expense.delete_all
   User.delete_all
   let(:user) { FactoryBot.create(:user, :confirmed) }
   let(:category) { FactoryBot.create(:category, author: user) }
