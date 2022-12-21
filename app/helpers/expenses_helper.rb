@@ -14,7 +14,7 @@ module ExpensesHelper
   end
 
   def category_expenses(category_id)
-    @expense_categories = ExpenseCategory.includes(:expense).where(category_id: category_id).order(created_at: :desc)
+    @expense_categories = ExpenseCategory.includes(:expense).where(category_id:).order(created_at: :desc)
     @expense_categories.map(&:expense)
   end
 
