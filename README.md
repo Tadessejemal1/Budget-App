@@ -85,6 +85,7 @@ The end result should follow the following data model (this is an Entity Relatio
 
 > ![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
 <!-- LIVE DEMO -->
+https://budget-app-project.onrender.com
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
