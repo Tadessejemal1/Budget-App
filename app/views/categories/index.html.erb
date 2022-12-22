@@ -25,13 +25,6 @@
     <p class="text-uppercase m-0">Categories</p>
     <a href="#"  class="text-white me-1 nav-link"><i class="bi bi-search"></i></a>  
   </div>
-
-  <div title="Add category" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
-    <%= link_to new_category_path, id: 'add_new_category' do %>
-      <i class="bi bi-plus-circle-fill text-success"></i>
-    <% end%>
-  </div>
-
   <% if @categories.present? %>
     <ul class="list-group mx-0 mt-3 px-2">
       <% @categories.each do |category|%>
@@ -58,4 +51,10 @@
       <p class="bg-light text-center"> There are no categories, yet. Please add categories!</p>
     </div>
   <% end %>
+
+  <div title="Add category" class="d-flex flex-column px-5 position-fixed h-15vh bottom-0 bg-success pb-3" style="width: 100%">
+    <%= link_to new_category_path, id: 'add_new_category' do %>
+      <h2 class="text-white text-center text-uppercase border border-white pt-3" style="height: 60px; margin-top: 30px; text-decoration: none">Add Category</h2>
+    <% end%>
+  </div>
 </section>      

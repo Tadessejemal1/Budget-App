@@ -7,9 +7,9 @@
     <a href="#"  class="me-1 text-white nav-link"><i class="bi bi-search"></i></a>  
   </div>
 
-  <div title="Add expense" class="fs-1 position-fixed bottom-0 end-0 px-4 pb-3">
+  <div title="Add expense" class="d-flex flex-column px-5 position-fixed bottom-0 bg-success pb-3" style="width: 100%">
     <%= link_to new_expense_path(prev_category_id: @category), id: 'add_new_expense'  do %>
-      <i class="bi bi-plus-circle-fill text-success"></i>
+      <h2 class="text-white text-center text-uppercase border border-white pt-3" style="height: 60px; margin-top: 30px; text-decoration: none">Add Expense</h2>
     <% end%>
   </div>
   <% if @expenses.present? %>
