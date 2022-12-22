@@ -168,8 +168,8 @@ Give a ⭐️ if you like this project!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
+  Original design idea by Gregoire Vella on Behance 
+  Thank you Microverse
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->

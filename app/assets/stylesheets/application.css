@@ -11,8 +11,3 @@
  *
  *= require_tree .
  *= require_self */
-
- .category {
-    text-decoration: none;
-  }
-
