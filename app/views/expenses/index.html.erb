@@ -14,9 +14,7 @@
   </div>
   <% if @expenses.present? %>
     <div class="d-flex justify-content-between align-items-center bg-white border border-bottom-2 py-4 px-2">
-      <h4 class="m-0">
-        <b><%= @category.name %></b>
-      </h4>
+      <h4 class="m-0">Total Expenses</h4>
       <p class="m-0">
         <b><%= number_to_currency(@total_category_expense, :unit => "$") %></b>
       </p>
