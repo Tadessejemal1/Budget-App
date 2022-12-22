@@ -88,7 +88,7 @@ The end result should follow the following data model (this is an Entity Relatio
 https://budget-app-project.onrender.com
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Live Demo](https://[github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png](https://budget-app-project.onrender.com))
+[Live Demo](https://budget-app-project.onrender.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
