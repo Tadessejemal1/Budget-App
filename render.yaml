@@ -1,18 +1,21 @@
 databases:
   - name: mysite
-    databaseName: mysite
-    user: mysite
+    ipAllowList: []
 
 services:
   - type: web
-    name: mysite
+    name: rails
     env: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    startCommand: "bundle exec rails s"
     envVars:
-      - key: DATABASE_URL
+      - key: RAILS_MASTER_KEY
+        sync: false
         fromDatabase:
           name: mysite
           property: connectionString
-      - key: RAILS_MASTER_KEY
-        sync: false
+  - type: redis
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
