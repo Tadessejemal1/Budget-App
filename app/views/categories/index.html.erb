@@ -52,9 +52,9 @@
     </div>
   <% end %>
 
-  <div title="Add category" class="d-flex flex-column px-5 position-fixed h-15vh bottom-0 bg-success pb-3" style="width: 100%">
+  <div title="Add category" class="d-flex flex-column px-5 position-fixed bottom-0 pb-3" style="width: 100%; background-color: #5fb523;height:135px;">
     <%= link_to new_category_path, id: 'add_new_category' do %>
-      <h2 class="text-white text-center text-uppercase border border-white pt-3" style="height: 60px; margin-top: 30px; text-decoration: none">Add Category</h2>
+      <button type="button" class="btn btn-lg btn-block pt-2 text-center text-white text-uppercase border border-white mt-3" style=" width:100%; border-radius:0; height:95px;">New Category</button>
     <% end%>
   </div>
 </section>      
