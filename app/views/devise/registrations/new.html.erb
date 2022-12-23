@@ -1,0 +1,48 @@
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2">
+    <a href="#" class="text-white nav-link"><i class="bi bi-arrow-left"></i></a>
+    <p class="text-uppercase m-0">Register</p>
+    <a href="#"  class="me-1 text-white nav-link">Next</a>  
+  </div>
+  <div class="container d-flex flex-column align-items-stretch pt-4">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field form-group py-2">
+        <%= f.email_field :email,
+          autofocus: true,
+          autocomplete: "email",
+          placeholder: "Email",
+          class: "form-control" %>
+      </div>
+
+      <div class="field form-group  py-2">
+        <%= f.text_field :name,
+          placeholder: "Full name",
+          autocomplete: "name",
+          class: "form-control" %>
+      </div>
+
+      <div class="field form-group  py-2">
+        <%= f.password_field :password,
+          autocomplete: "new-password",
+          placeholder: "Password",
+          class: "form-control" %>
+      </div>
+
+      <div class="field form-group  py-2">
+        <%= f.password_field :password_confirmation,
+          autocomplete: "new-password",
+          placeholder: "Password confirmation",
+          class: "form-control" %>
+      </div>
+
+      <div class="actions pb-4">
+        <%= f.submit "Sign up",
+          data: { turbo: false },
+          class: "btn btn-primary text-white" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</section>

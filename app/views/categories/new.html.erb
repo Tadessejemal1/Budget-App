@@ -1,0 +1,41 @@
+<section class="position-relative">
+  <div class="d-flex w-100 justify-content-between align-items-center bg-primary text-white position-fixed top-0 py-2">
+    <%= link_to categories_path, class: "text-white nav-link" do %>
+      <i class="bi bi-arrow-left"></i>
+    <% end%>
+    <p class="text-uppercase m-0">New category</p>
+    <a href="#"  class="text-white nav-link">Create</a>  
+  </div>
+  <div class="container d-flex flex-column align-items-stretch pt-4">
+    <%= form_with model: @category do |f| %>
+      <% if @category.errors.any? %>
+        <div class="alert alert-danger mt-4" role="alert">
+          <% @category.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="form-group py-1">
+        <%= f.text_field :name,
+          autofocus: true,
+          autocomplete: "name",
+          placeholder: "Category name",
+          class: "form-control",
+          required: true %>
+      </div>
+
+      <div class="form-group py-1">
+        <%= f.text_field :icon,
+          autofocus: true,
+          autocomplete: "icon",
+          placeholder: "Icon url",
+          class: "form-control",
+          required: true %>
+      </div>
+
+      <div class="actions py-2">
+        <%= f.submit "Save", class: "btn btn-primary px-3", data: { turbo: false } %>
+      </div>
+    <% end %>
+  </div>
+</section>
