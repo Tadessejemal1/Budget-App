@@ -7,9 +7,9 @@
     <a href="#"  class="me-1 text-white nav-link"><i class="bi bi-search"></i></a>  
   </div>
 
-  <div title="Add expense" class="d-flex flex-column px-5 position-fixed bottom-0 pb-3" style="width: 100%; background-color: #5fb523;height:135px;">
+  <div title="Add expense" class="d-flex flex-column px-5 position-fixed bottom-0 pb-3" style="width: 100%; background-color: #5fb523;height:100px;">
     <%= link_to new_expense_path(prev_category_id: @category), id: 'add_new_expense'  do %>
-      <button type="button" class="btn btn-lg btn-block pt-2 text-center text-white text-uppercase border border-white mt-3" style=" width:100%; border-radius:0; height:105px;">New Expense</button>
+      <button type="button" class="btn btn-lg btn-block pt-2 text-center text-white text-uppercase border border-white mt-3" style=" width:100%; border-radius:0; height:70px;">New Expense</button>
     <% end%>
   </div>
   <% if @expenses.present? %>
